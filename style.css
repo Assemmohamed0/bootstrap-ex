@@ -1,0 +1,635 @@
+body
+{
+    font-family: 'Source Sans Pro', sans-serif;
+    overflow: auto;
+}
+h1,h2,h3,h4,h5,h6
+{
+    font-family: 'Poppins', sans-serif; 
+}
+.same-padding
+{
+    padding: 80px 0px;
+}
+li
+{
+    list-style: none;
+}
+.team-prices-description
+{
+    position: relative;
+    z-index: 1;
+}
+.team-prices-description::before
+{
+    z-index: -1;
+    content: "C";
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    color: #F2F2F2;
+    transform: translate(-50% , -45%) ;
+    font-size: 76px;
+}
+.features-last-description
+{
+    position: relative;
+    z-index: 1;
+}
+.features-last-description::after
+{
+    content: "W";
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: rgba(163, 163, 163, 0.3);
+    transform: translate(-15%,-50%);
+    font-size: 4.5rem;
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+nav
+{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(114, 114, 114, 0.614);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.596);
+}
+.navbar-light .navbar-nav .active > .nav-link
+{
+    color:white;
+}
+.navbar-nav
+{
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.navbar
+{
+    padding: 0;
+}
+.nav-icons i
+{
+    margin: 0px 10px;
+    color: white;
+    font-size: 13px;
+}
+.nav-icons i:hover
+{
+    color: #ddd;
+}
+.nav-item
+{
+    margin-right: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+.navbar-light .navbar-toggler-icon
+{
+    background-image: url(images/clipart365828.png);
+}
+.navbar-light .navbar-toggler
+{
+    outline: none;
+    border: 0;
+    border-radius: 0;
+}
+.nav-logo
+{
+    width: 100px;
+}
+@media (max-width:991px)
+{
+    .nav-icons
+    {
+        display: none;
+    }
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+.layer
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 19, 19, 0.55);
+}
+header .slide
+{
+    height: 100vh !important;
+}
+
+header .carousel-inner , header .carousel-item
+{
+    height: 100%;
+}
+header .carousel-caption
+{
+    right: 0;
+    left: 0;
+    bottom: 50% ;
+    transform: translateY(50%);
+    z-index: 1;
+    margin: auto;
+}
+header .carousel-indicators
+{
+    bottom: 40px;
+}
+@media screen and (max-width:800px)
+{
+    header .carousel h1
+    {
+        font-size: 62px !important;
+    }
+    header .carousel h4
+    {
+        font-size: 16px !important;
+    }
+    header .carousel a
+    {
+        display: none;
+    }
+}
+.btn1
+{
+    background-color: #00c3da;
+}
+.btn1:hover
+{
+    background-color: #00D5EE;
+}
+.btn2
+{
+    margin-left: 15px;
+}
+.btn
+{
+    padding: 0 30px;
+    line-height: 50px;
+}
+header .slide img
+{
+    height: 100%;
+}
+header .carousel-indicators li
+{
+    width: 35px;
+}
+
+header .carousel h1
+{
+    font-size: 90px;
+    font-weight: 700;
+}
+header .carousel h4
+{
+    font-size: 18px;
+}
+header .carousel-control-next, header .carousel-control-prev 
+{
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    padding: 25px;
+    transition: .5s;
+    position: relative;/* to assume that there's no layer and catch it easily*/
+
+}
+.carousel-control {
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+
+header .arr
+{
+    font-size: 30px;
+}
+header .carousel-control-next:hover , header .carousel-control-prev:hover
+{
+    color: black;
+    z-index: 1;
+    
+}
+header .carousel-control-next:hover .moving-lay , header .carousel-control-prev:hover .moving-lay
+{
+    width: 50px;
+}
+.moving-lay
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 0px;
+    height: 50px;
+    transition: .3s;
+    background-color: white;
+    z-index: -1;
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+.information h5
+{
+    font-size: 13px;
+    letter-spacing: 0.05em;
+}
+.information p
+{
+    font-size: 24px;
+}
+.info-btn
+{
+    color: black;
+}
+.info-btn:hover
+{
+    background-color: black;
+    color: white;
+}
+.information .span1::after
+{
+    content: "softwares";
+    color: #17C3DA;
+    animation-name: moving;
+    animation-duration:7s;
+    animation-iteration-count: infinite;
+    
+}
+.information .span2::after
+{
+    content: "|";
+    color: rgb(163, 163, 163);
+    animation-name: opacityy;
+    animation-duration:.8s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes opacityy
+{
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+@keyframes moving
+{
+    0%{content: "softwares";}
+    15%{content: "softwares";}
+    16.5%{content: "softwar";}
+    18%{content: "softwa";}
+    19.5%{content: "softw";}
+    21%{content: "soft";}
+    22.5%{content: "sof";}
+    24%{content: "so";}
+    25.5%{content: "s";}
+    27%{content: "";}
+    28.5%{content: "a";}
+    30%{content: "ap";}
+    31.5%{content: "app";}
+    33%{content: "apps";}
+    48%{content: "apps";}
+    49.5%{content: "app";}
+    51%{content: "ap";}
+    52.5%{content: "a";}
+    54%{content: "";}
+    55.5%{content: "w";}
+    57%{content: "we";}
+    58.5%{content: "web";}
+    60%{content: "webs";}
+    61.5%{content: "websi";}
+    63%{content: "websit";}
+    64.5%{content: "website";}
+    66%{content: "websites";}
+    81%{content: "websites";}
+    82.5%{content: "website";}
+    84%{content: "websit";}
+    85.5%{content: "websi";}
+    87%{content: "webs";}
+    88.5%{content: "web";}
+    90%{content: "we";}
+    91%{content: "w";}
+    92%{content: "";}
+    93%{content: "s";}
+    94%{content: "so";}
+    95%{content: "sof";}
+    96%{content: "soft";}
+    97%{content: "softw";}
+    98%{content: "softwa";}
+    99%{content: "softwar";}
+    100%{content: "software";}
+
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+.team h2
+{
+    font-size: 38px;
+}
+.team p
+{
+    font-size: 18px;
+}
+.team .layer
+{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 195, 218, 0.9);
+    opacity: 0;
+    transition: .3s;
+}
+.four-divs
+{
+    margin-bottom: 30px;
+}
+.four-divs:hover .layer
+{
+    opacity: 1;
+    top: 0;
+}
+.layer i , .layer p
+{
+    margin: 0px 6px;
+    color: white;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+}
+.layer i:hover
+{
+    text-shadow: 1px 1px 5px white;
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+.features
+{
+    background-color: #616161;
+}
+.features i
+{
+    font-size: 60px;
+    color: rgb(0,173,159);
+    text-shadow: 1px 0px white,
+    -1px 0px white,
+    0px 1px white,
+    0px -1px white;
+}
+.features h4
+{
+    font-size: 13px;
+    letter-spacing: 0.1em;
+}
+.nav-padding
+{
+    padding-left: 5% !important;
+}
+.features ul
+{
+    padding: 0px 15px;
+}
+.features ul li
+{
+    margin-bottom: 15px;
+}
+.features ul li i
+{
+    color: white;
+    text-shadow: none;
+    font-size: 15px;
+    margin-right: 10px;
+}
+@media screen and (max-width:991px)
+{
+
+    .features .container
+    {
+        max-width: 100% !important;
+        margin: 0;
+    }
+    .media-center
+    {
+        text-align: center;
+    }
+    .features ul .col-md-6
+    {
+        padding-left: 0;
+    }
+    .features .features-last-description::after
+    {
+        top: 0px;
+        left: 50%;
+        color: rgba(163, 163, 163, 0.3);
+        transform: translate(-50% , -50%);
+        font-size: 5rem;
+    }
+    .customers .carousel a
+    {
+        display: none;
+    }
+
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+ .bg-f7
+{
+    background-color: #F7F7F7;
+}
+.prices-divs
+{
+    margin-bottom: 35px;
+}
+.prices .team-prices-description::before
+{
+    color: #EAEAEA;
+}
+.prices-divs
+{
+    padding: 2rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
+
+}
+.prices p
+{
+    font-size: 18px;
+    font-weight: 400;
+}
+.prices p span
+{
+    font-size: 55px;
+    font-weight: 800;
+    vertical-align: top;
+
+}
+.prices ul
+{
+    padding: 0;
+}
+.prices ul li
+{
+    margin-bottom: 15px;
+    color: #787878;
+}
+.prices .btn
+{
+    padding: 2px 16px;
+    line-height: 35px;
+}
+.prices button
+{
+    font-size: 13px;
+    font-weight: 600;
+}
+.offer
+{
+    color: #00c3da;
+}
+.best-value
+{
+    position: absolute;
+    right: 10px;
+    top: 35px;
+    font-size: 9px;
+    padding: 5px 10px;
+    background-color: #00c3da;
+    margin-left: 2rem;
+    letter-spacing: .05rem;
+}
+@media screen and (min-width:992px)
+{
+    .special
+    {
+        transform: translateY(-3%);
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+.customers-paragraph
+{
+    font-size: 18px;
+}
+
+.customers .carousel-indicators .active {
+    background-color: #00c3da;
+}
+.customers .carousel-indicators li {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: gray;
+}
+.customers .carousel-control-next, .customers .carousel-control-prev 
+{
+    width: 60px;
+    height: 40px;
+    opacity: 1;
+    color: black;
+    padding: 25px;
+    transition: .5s;
+    transform: translateY(-50%);
+    top: 50%;
+    font-size: 35px;
+}
+.customers .carousel-control-next
+{
+    right: -80px;
+}
+.customers .carousel-control-next:hover
+{
+    color: #00c3da;
+    transform: translate(10px , -50%);
+}
+
+.customers .carousel-control-prev
+{
+    left: -80px;
+}
+.customers .carousel-control-prev:hover
+{
+    color: #00c3da;
+    transform: translate(-10px , -50%);
+}
+.customers .slider-cont
+{
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 5rem 4rem;
+}
+.customers .slider-cont img
+{
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+@media screen and (max-width:991px)
+{
+    .customers .carousel a
+    {
+        display: none;
+    }
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+.last-section .features-last-description::after
+{
+    content: "G";
+    transform: translate(-20%,-50%);
+}
+@media screen and (min-width:992px)
+{
+    .embed-responsive
+    {
+        height: 945.8px;
+    }
+}
+.feedback
+{
+    padding: 5rem;
+}
+.feedback p
+{
+    font-size: 18px;
+}
+.feedback textarea
+{
+    resize: none;
+    padding: 15px 15px;
+
+}
+.feedback button
+{
+    box-shadow: none !important;
+}
+.form-control
+{
+    border-radius: 0;
+    box-shadow: none !important;
+    height: 50px;
+    padding: 0 15px;
+    transition: .3s;
+    font-size: 15px;
+}
+.form-control:focus
+{
+    border: 2px solid black;
+}
+
+.last-section .row
+{
+    margin: 0 !important;
+}
